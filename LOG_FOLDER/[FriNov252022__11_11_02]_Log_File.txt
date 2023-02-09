@@ -1,0 +1,12 @@
+[Fri Nov 25 2022||11:11:02]Logging Feature Initiated
+[Fri Nov 25 2022||11:11:05]Emergency Button Clicked
+[Fri Nov 25 2022||11:11:06]Emergency Button Clicked
+[Fri Nov 25 2022||11:11:11]Connection Button Pressed
+[Fri Nov 25 2022||11:11:11]Connection Established
+[Fri Nov 25 2022||11:11:12]Get Object List Button Pressed
+[Fri Nov 25 2022||11:11:13]Request Robot Control Button Clicked
+[Fri Nov 25 2022||11:11:13]Access to Robot Joint Control Granted
+[Fri Nov 25 2022||11:11:13]Motion Control for Demo Robot Done
+[Fri Nov 25 2022||11:11:14]Request Tool Control Button Clicked
+[Fri Nov 25 2022||11:11:14]Access to Robot End Effector Control Granted
+[Fri Nov 25 2022||11:15:28]Application Exit: Log File Closed

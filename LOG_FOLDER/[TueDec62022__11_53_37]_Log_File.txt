@@ -1,0 +1,21 @@
+[Tue Dec 6 2022||11:53:37]Logging Feature Initiated
+[Tue Dec 6 2022||11:54:25]Connection Button Pressed
+[Tue Dec 6 2022||11:54:25]Connection Established
+[Tue Dec 6 2022||11:54:27]Get Object List Button Pressed
+[Tue Dec 6 2022||11:54:28]Request Robot Control Button Clicked
+[Tue Dec 6 2022||11:54:28]Access to Robot Joint Control Granted
+[Tue Dec 6 2022||11:54:28]Motion Control for Demo Robot Done
+[Tue Dec 6 2022||11:54:29]Request Tool Control Button Clicked
+[Tue Dec 6 2022||11:54:29]Access to Robot End Effector Control Granted
+[Tue Dec 6 2022||11:54:29]Request Operation Control Button Clicked
+[Tue Dec 6 2022||11:54:29]Access to Operation Control Granted
+[Tue Dec 6 2022||11:55:15]Updating Robot Info Table
+[Tue Dec 6 2022||11:55:25]Updating Robot Info Table
+[Tue Dec 6 2022||11:56:30]Updating Robot Info Table
+[Tue Dec 6 2022||11:57:02]Updating Robot Info Table
+[Tue Dec 6 2022||11:57:12]Updating Robot Info Table
+[Tue Dec 6 2022||11:57:33]Updating Robot Info Table
+[Tue Dec 6 2022||11:59:03]Updating Robot Info Table
+[Tue Dec 6 2022||12:06:48]Updating Robot Info Table
+[Tue Dec 6 2022||12:13:44]Updating Robot Info Table
+[Tue Dec 6 2022||12:13:58]Application Exit: Log File Closed

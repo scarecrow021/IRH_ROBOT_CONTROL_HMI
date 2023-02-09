@@ -1,0 +1,5 @@
+[Thu Nov 24 2022||10:56:47]Logging Feature Initiated
+[Thu Nov 24 2022||10:56:47]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||10:57:18]Connection Button Pressed
+[Thu Nov 24 2022||10:57:18]Connection Established
+[Thu Nov 24 2022||10:57:24]Get Object List Button Pressed

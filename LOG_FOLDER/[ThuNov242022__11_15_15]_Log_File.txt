@@ -1,0 +1,10 @@
+[Thu Nov 24 2022||11:15:15]Logging Feature Initiated
+[Thu Nov 24 2022||11:15:15]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||11:15:23]Get Object List Button Pressed
+[Thu Nov 24 2022||11:15:24]-858993460
+[Thu Nov 24 2022||11:15:24]4
+[Thu Nov 24 2022||11:16:11]Get Object List Button Pressed
+[Thu Nov 24 2022||11:16:12]4
+[Thu Nov 24 2022||11:16:12]4
+[Thu Nov 24 2022||11:16:23]Emergency Button Clicked
+[Thu Nov 24 2022||11:16:26]Application Exit: Log File Closed

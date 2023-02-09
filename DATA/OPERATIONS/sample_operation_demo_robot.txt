@@ -1,0 +1,5 @@
+Demo Robot, MoveTo, Configuration 0, CONFIGURATIONS/configuration_0.txt
+Demo Robot, ComplexMoveTo, Configuration 1, CONFIGURATIONS/configuration_1.txt
+Demo Robot, ComplexMoveTo, Configuration Place, CONFIGURATIONS/configuration_place.txt
+Tool, Place, NIL, NIL
+Demo Robot, ComplexMoveTo, Configuration Move Away, CONFIGURATIONS/configuration_move_away.txt

@@ -1,0 +1,9 @@
+[Tue Nov 22 2022||17:39:57]Logging Feature Initiated
+[Tue Nov 22 2022||17:39:57]Robot Joint Controllers Set to 0
+[Tue Nov 22 2022||17:40:05]Connection Button Pressed
+[Tue Nov 22 2022||17:40:05]Connection Established
+[Tue Nov 22 2022||17:40:06]Get Object List Button Pressed
+[Tue Nov 22 2022||17:40:09]Request Robot Control Button Clicked
+[Tue Nov 22 2022||17:40:09]Access to Robot Joint Control Granted
+[Tue Nov 22 2022||17:40:29]Emergency Button Clicked
+[Tue Nov 22 2022||17:40:31]Application Exit: Log File Closed

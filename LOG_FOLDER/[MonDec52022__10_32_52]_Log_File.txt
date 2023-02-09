@@ -1,0 +1,3 @@
+[Mon Dec 5 2022||10:32:52]Logging Feature Initiated
+[Mon Dec 5 2022||10:32:53]Get Object List Button Pressed
+[Mon Dec 5 2022||10:32:58]Application Exit: Log File Closed

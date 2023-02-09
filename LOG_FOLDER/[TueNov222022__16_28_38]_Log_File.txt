@@ -1,0 +1,5 @@
+[Tue Nov 22 2022||16:28:38]Logging Feature Initiated
+[Tue Nov 22 2022||16:28:43]Connection Button Pressed
+[Tue Nov 22 2022||16:29:04]Did not work!
+[Tue Nov 22 2022||16:30:00]Emergency Button Clicked
+[Tue Nov 22 2022||16:30:14]Application Exit: Log File Closed

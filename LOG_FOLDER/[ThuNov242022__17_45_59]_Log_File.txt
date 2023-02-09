@@ -1,0 +1,12 @@
+[Thu Nov 24 2022||17:45:59]Logging Feature Initiated
+[Thu Nov 24 2022||17:45:59]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||17:46:07]Get Object List Button Pressed
+[Thu Nov 24 2022||17:46:13]Request Robot Control Button Clicked
+[Thu Nov 24 2022||17:46:13]Access to Robot Joint Control Granted
+[Thu Nov 24 2022||17:46:14]Motion Control for Demo Robot Done
+[Thu Nov 24 2022||17:46:16]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||17:46:19]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||17:46:24]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||17:46:30]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||17:46:35]Robot Joint Controllers Set to 0
+[Thu Nov 24 2022||17:46:37]Application Exit: Log File Closed

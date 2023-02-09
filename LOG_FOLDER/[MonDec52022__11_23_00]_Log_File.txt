@@ -1,0 +1,9 @@
+[Mon Dec 5 2022||11:23:00]Logging Feature Initiated
+[Mon Dec 5 2022||11:23:14]Get Object List Button Pressed
+[Mon Dec 5 2022||11:23:15]Request Robot Control Button Clicked
+[Mon Dec 5 2022||11:23:15]Access to Robot Joint Control Granted
+[Mon Dec 5 2022||11:23:15]Motion Control for Demo Robot Done
+[Mon Dec 5 2022||11:24:07]Updating Robot Info Table
+[Mon Dec 5 2022||11:24:17]Updating Robot Info Table
+[Mon Dec 5 2022||11:24:35]Updating Robot Info Table
+[Mon Dec 5 2022||11:24:45]Application Exit: Log File Closed

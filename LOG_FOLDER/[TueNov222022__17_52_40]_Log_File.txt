@@ -1,0 +1,5 @@
+[Tue Nov 22 2022||17:52:40]Logging Feature Initiated
+[Tue Nov 22 2022||17:52:40]Robot Joint Controllers Set to 0
+[Tue Nov 22 2022||17:52:45]Emergency Button Clicked
+[Tue Nov 22 2022||17:52:46]Emergency Button Clicked
+[Tue Nov 22 2022||17:52:48]Application Exit: Log File Closed

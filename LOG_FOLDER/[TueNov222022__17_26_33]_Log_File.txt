@@ -1,0 +1,3 @@
+[Tue Nov 22 2022||17:26:33]Logging Feature Initiated
+[Tue Nov 22 2022||17:27:21]Request Robot Control Button Clicked
+[Tue Nov 22 2022||17:27:21]Access to Robot Joint Control Granted

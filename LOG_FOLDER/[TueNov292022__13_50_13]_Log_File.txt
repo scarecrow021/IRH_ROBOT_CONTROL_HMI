@@ -1,0 +1,4 @@
+[Tue Nov 29 2022||13:50:13]Logging Feature Initiated
+[Tue Nov 29 2022||13:50:18]Connection Button Pressed
+[Tue Nov 29 2022||13:50:18]Connection Established
+[Tue Nov 29 2022||13:50:20]Get Object List Button Pressed

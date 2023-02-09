@@ -1,0 +1,47 @@
+[Mon Nov 28 2022||11:06:38]Logging Feature Initiated
+[Mon Nov 28 2022||11:06:43]Connection Button Pressed
+[Mon Nov 28 2022||11:06:43]Connection Established
+[Mon Nov 28 2022||11:06:44]Get Object List Button Pressed
+[Mon Nov 28 2022||11:06:45]Request Robot Control Button Clicked
+[Mon Nov 28 2022||11:06:45]Access to Robot Joint Control Granted
+[Mon Nov 28 2022||11:06:45]Motion Control for Demo Robot Done
+[Mon Nov 28 2022||11:06:50]Updating Robot Info Table
+[Mon Nov 28 2022||11:06:54]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:06]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:10]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:13]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:16]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:19]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:21]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:24]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:26]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:37]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:41]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:43]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:45]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:51]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:53]Updating Robot Info Table
+[Mon Nov 28 2022||11:07:55]Updating Robot Info Table
+[Mon Nov 28 2022||11:08:20]Updating Robot Info Table
+[Mon Nov 28 2022||11:08:51]Updating Robot Info Table
+[Mon Nov 28 2022||11:08:54]Updating Robot Info Table
+[Mon Nov 28 2022||11:08:57]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:00]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:03]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:05]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:10]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:20]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:26]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:34]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:37]Updating Robot Info Table
+[Mon Nov 28 2022||11:09:49]Updating Robot Info Table
+[Mon Nov 28 2022||11:14:45]Updating Robot Info Table
+[Mon Nov 28 2022||11:14:47]Updating Robot Info Table
+[Mon Nov 28 2022||11:14:59]Updating Robot Info Table
+[Mon Nov 28 2022||11:15:08]Updating Robot Info Table
+[Mon Nov 28 2022||11:15:10]Updating Robot Info Table
+[Mon Nov 28 2022||11:15:12]Updating Robot Info Table
+[Mon Nov 28 2022||11:15:25]Updating Robot Info Table
+[Mon Nov 28 2022||11:15:55]Request Tool Control Button Clicked
+[Mon Nov 28 2022||11:15:55]Access to Robot End Effector Control Granted
+[Mon Nov 28 2022||11:16:45]Application Exit: Log File Closed

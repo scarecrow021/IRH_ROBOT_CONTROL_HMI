@@ -1,0 +1,2 @@
+[Mon Dec 5 2022||10:25:31]Logging Feature Initiated
+[Mon Dec 5 2022||10:25:40]Application Exit: Log File Closed
