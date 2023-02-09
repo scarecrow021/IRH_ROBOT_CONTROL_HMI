@@ -1,9 +1,9 @@
 cmake_minimum_required (VERSION 3.19)
-project (VR4_GUI_V2)# Enter your Project Name
+project (IRH_ROBOT_CONTROL_HMI)# Enter your Project Name
 # Set Project Version Number, however if you do not have an idea keep as it is.
 # This helps in creating version control for a project which has a repository tool like Git 
-set (VR4_GUI_V2_VERSION_MAJOR 1)
-set (VR4_GUI_V2_VERSION_MINOR 0)
+set (IRH_ROBOT_CONTROL_HMI_VERSION_MAJOR 1)
+set (IRH_ROBOT_CONTROL_HMI_VERSION_MINOR 0)
 
 # Keep this as it is.
 if (MSVC_VERSION GREATER_EQUAL "1900")
