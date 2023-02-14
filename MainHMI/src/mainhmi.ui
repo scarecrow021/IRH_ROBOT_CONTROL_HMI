@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1612</width>
-    <height>925</height>
+    <height>937</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -619,6 +619,206 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
               </attribute>
               <layout class="QVBoxLayout" name="verticalLayout_5">
                <item>
+                <widget class="QFrame" name="frame_3">
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Plain</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_18">
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_12">
+                      <item>
+                       <widget class="QLabel" name="label_2">
+                        <property name="text">
+                         <string>EE - Trans - X (m)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeTransX">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_13">
+                      <item>
+                       <widget class="QLabel" name="label_3">
+                        <property name="text">
+                         <string>EE - Trans - Y (m)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeTransY">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_14">
+                      <item>
+                       <widget class="QLabel" name="label_6">
+                        <property name="text">
+                         <string>EE - Trans - Z (m)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeTransZ">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_16">
+                      <item>
+                       <widget class="QLabel" name="label_8">
+                        <property name="text">
+                         <string>EE - Rot - X (deg)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeRotX">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_17">
+                      <item>
+                       <widget class="QLabel" name="label_9">
+                        <property name="text">
+                         <string>EE - Rot - Y (deg)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeRotY">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_15">
+                      <item>
+                       <widget class="QLabel" name="label_7">
+                        <property name="text">
+                         <string>EE - Rot - Z (deg)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeRotZ">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
                 <widget class="QTabWidget" name="tabWidget_3">
                  <property name="currentIndex">
                   <number>0</number>
@@ -1014,206 +1214,6 @@ background: qradialgradient(cx: 1.6, cy: 1.6, fx: 1.5, fy: 0.5,radius: 1.8, stop
                    <string>Connected Joystick</string>
                   </attribute>
                  </widget>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frame_3">
-                 <property name="frameShape">
-                  <enum>QFrame::Box</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Plain</enum>
-                 </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_18">
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_8">
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_12">
-                      <item>
-                       <widget class="QLabel" name="label_2">
-                        <property name="text">
-                         <string>EE - Trans - X (m)</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="eeTransX">
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::NoButtons</enum>
-                        </property>
-                        <property name="decimals">
-                         <number>3</number>
-                        </property>
-                        <property name="minimum">
-                         <double>-100000.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>100000.000000000000000</double>
-                        </property>
-                        <property name="singleStep">
-                         <double>0.000001000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_13">
-                      <item>
-                       <widget class="QLabel" name="label_3">
-                        <property name="text">
-                         <string>EE - Trans - Y (m)</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="eeTransY">
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::NoButtons</enum>
-                        </property>
-                        <property name="decimals">
-                         <number>3</number>
-                        </property>
-                        <property name="minimum">
-                         <double>-100000.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>100000.000000000000000</double>
-                        </property>
-                        <property name="singleStep">
-                         <double>0.000001000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_14">
-                      <item>
-                       <widget class="QLabel" name="label_6">
-                        <property name="text">
-                         <string>EE - Trans - Z (m)</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="eeTransZ">
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::NoButtons</enum>
-                        </property>
-                        <property name="decimals">
-                         <number>3</number>
-                        </property>
-                        <property name="minimum">
-                         <double>-100000.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>100000.000000000000000</double>
-                        </property>
-                        <property name="singleStep">
-                         <double>0.000001000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_7">
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_16">
-                      <item>
-                       <widget class="QLabel" name="label_8">
-                        <property name="text">
-                         <string>EE - Rot - X (deg)</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="eeRotX">
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::NoButtons</enum>
-                        </property>
-                        <property name="decimals">
-                         <number>3</number>
-                        </property>
-                        <property name="minimum">
-                         <double>-100000.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>100000.000000000000000</double>
-                        </property>
-                        <property name="singleStep">
-                         <double>0.000001000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_17">
-                      <item>
-                       <widget class="QLabel" name="label_9">
-                        <property name="text">
-                         <string>EE - Rot - Y (deg)</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="eeRotY">
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::NoButtons</enum>
-                        </property>
-                        <property name="decimals">
-                         <number>3</number>
-                        </property>
-                        <property name="minimum">
-                         <double>-100000.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>100000.000000000000000</double>
-                        </property>
-                        <property name="singleStep">
-                         <double>0.000001000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_15">
-                      <item>
-                       <widget class="QLabel" name="label_7">
-                        <property name="text">
-                         <string>EE - Rot - Z (deg)</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="eeRotZ">
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::NoButtons</enum>
-                        </property>
-                        <property name="decimals">
-                         <number>3</number>
-                        </property>
-                        <property name="minimum">
-                         <double>-100000.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>100000.000000000000000</double>
-                        </property>
-                        <property name="singleStep">
-                         <double>0.000001000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
                 </widget>
                </item>
               </layout>

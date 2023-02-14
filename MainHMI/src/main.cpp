@@ -1,10 +1,12 @@
 //#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 
+
+
 #include "mainhmi.h"
 
 #include <QApplication>
-
-
+#pragma comment(lib, "Xinput.lib")
+#pragma comment(lib, "Xinput9_1_0.lib")
 
 int main(int argc, char *argv[])
 {
@@ -13,4 +15,6 @@ int main(int argc, char *argv[])
     MainHMI w;
     w.PerformStartup();
     return a.exec();
+
+
 }

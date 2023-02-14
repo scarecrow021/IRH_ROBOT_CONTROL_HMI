@@ -26,6 +26,8 @@
 #include <string>
 #include <sstream>
 #include <cstring>
+#include <WinSock2.h>
+#include <Xinput.h>
 
 
 

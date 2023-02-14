@@ -10,7 +10,6 @@ set (MainHMI_VERSION_MINOR 0)
 file(GLOB_RECURSE MainHMI_SOURCES "src/*.cpp" "src/*.ui") # Source consists of all .cpp files and .ui files if present in the folder
 # If the source folder does not have a .ui file, please remove "src/*.ui" or it will give an error in compilation!
 file(GLOB_RECURSE MainHMI_HEADERS "include/*.h" ) # Include consists of all .h files
-file(GLOB_RECURSE MainHMI_RESOURCES "include/*.rc")
 set(ROOT "${PROJECT_SOURCE_DIR}") # Keep as it is
 source_group(TREE ${ROOT} FILES ${MainHMI_SOURCES} ${MainHMI_HEADERS} ${MainHMI_RESOURCES})
 # source group function will group all the files in a sub branch of the project tree for Qt or VS and finally for compilation.

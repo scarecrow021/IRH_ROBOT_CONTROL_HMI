@@ -13,7 +13,7 @@ add_library(librapi src/char.cpp
                     src/value.cpp)
 message("Adding librapi")
 target_include_directories( librapi PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(librapi wsock32 ws2_32)
+target_link_libraries(librapi cpp wsock32 ws2_32)
 
 
 
