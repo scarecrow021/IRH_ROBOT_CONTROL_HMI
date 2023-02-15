@@ -1,4 +1,0 @@
-[Tue Dec 6 2022||10:10:32]Logging Feature Initiated
-[Tue Dec 6 2022||10:10:34]Request Operation Control Button Clicked
-[Tue Dec 6 2022||10:10:34]Access to Operation Control Granted
-[Tue Dec 6 2022||10:10:50]Application Exit: Log File Closed

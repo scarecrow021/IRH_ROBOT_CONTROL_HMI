@@ -1,8 +1,0 @@
-[Mon Dec 5 2022||10:29:50]Logging Feature Initiated
-[Mon Dec 5 2022||10:29:51]Connection Button Pressed
-[Mon Dec 5 2022||10:29:51]Connection Established
-[Mon Dec 5 2022||10:29:52]Get Object List Button Pressed
-[Mon Dec 5 2022||10:29:53]Request Robot Control Button Clicked
-[Mon Dec 5 2022||10:29:53]Access to Robot Joint Control Granted
-[Mon Dec 5 2022||10:29:53]Motion Control for Demo Robot Done
-[Mon Dec 5 2022||10:30:58]Application Exit: Log File Closed

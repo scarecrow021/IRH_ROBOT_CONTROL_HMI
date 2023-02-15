@@ -1,5 +1,0 @@
-[Tue Dec 6 2022||09:03:16]Logging Feature Initiated
-[Tue Dec 6 2022||09:03:22]Request Operation Control Button Clicked
-[Tue Dec 6 2022||09:03:22]Access to Operation Control Granted
-[Tue Dec 6 2022||09:03:24]Updating Robot Info Table
-[Tue Dec 6 2022||09:03:55]Application Exit: Log File Closed

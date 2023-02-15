@@ -1,4 +1,0 @@
-[Tue Dec 6 2022||08:33:39]Logging Feature Initiated
-[Tue Dec 6 2022||08:33:48]Request Operation Control Button Clicked
-[Tue Dec 6 2022||08:33:48]Access to Operation Control Granted
-[Tue Dec 6 2022||08:33:50]Updating Robot Info Table

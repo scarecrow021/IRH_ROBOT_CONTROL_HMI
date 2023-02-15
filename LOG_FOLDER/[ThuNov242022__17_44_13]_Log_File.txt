@@ -1,2 +1,0 @@
-[Thu Nov 24 2022||17:44:13]Logging Feature Initiated
-[Thu Nov 24 2022||17:44:14]Robot Joint Controllers Set to 0

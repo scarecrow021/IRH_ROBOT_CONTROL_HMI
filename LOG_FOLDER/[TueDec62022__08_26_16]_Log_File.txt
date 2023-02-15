@@ -1,3 +1,0 @@
-[Tue Dec 6 2022||08:26:16]Logging Feature Initiated
-[Tue Dec 6 2022||08:26:25]Request Operation Control Button Clicked
-[Tue Dec 6 2022||08:26:25]Access to Operation Control Granted

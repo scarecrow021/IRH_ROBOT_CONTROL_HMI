@@ -1,5 +1,0 @@
-[Thu Dec 1 2022||13:43:26]Logging Feature Initiated
-[Thu Dec 1 2022||13:43:30]b tool
-[Thu Dec 1 2022||13:43:30](2, 16198812, 1)
-[Thu Dec 1 2022||13:43:31]Dynamic
-[Thu Dec 1 2022||13:43:39]Application Exit: Log File Closed

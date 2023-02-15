@@ -1,3 +1,0 @@
-[Tue Nov 22 2022||14:19:31]Logging Feature Initiated
-[Tue Nov 22 2022||14:19:35]Connection Button Pressed
-[Tue Nov 22 2022||14:19:35]Connection Established
