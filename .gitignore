@@ -1,4 +1,6 @@
-build_msvc/
-build_support/
-executable_support/
+build_qt_debug_mingw/
+build_qt_debug_msvc/
+build_qt_release_mingw/
+build_qt_release_msvc/
 .vscode/
+CMakeLists.txt.user

@@ -1,0 +1,1549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainHMI</class>
+ <widget class="QMainWindow" name="MainHMI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1612</width>
+    <height>937</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainHMI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: white;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="iconLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <italic>false</italic>
+             <bold>true</bold>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>ITER RH Robot Control HMI</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="margin">
+            <number>15</number>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>120</horstretch>
+             <verstretch>120</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+color: black;
+border: 2px solid rgb(0,0,0);
+border-radius: 20px;
+border-style: outset;
+background: qradialgradient(cx: 0.3, cy: -0.3, fx: -0.4, fy: 0.4,radius: 1.2, stop: 0 rgb(250,0,0), stop: 1 rgb(253,80,122));
+padding: 5px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.3, fx: -0.4, fy: 0.4,radius: 1.1, stop: 0 rgb(250,0,0), stop: 1 rgb(247,23,83));
+}
+
+QPushButton:pressed {
+border: 5px solid rgb(20,20,20);
+background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, stop: 0 rgb(250,0,0), stop: 1 rgb(250,250,250));
+}</string>
+           </property>
+           <property name="text">
+            <string>STOP</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QTabWidget" name="mainTab">
+         <property name="minimumSize">
+          <size>
+           <width>1100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTabWidget::pane { /* The tab widget frame */
+border-top: 1px solid #4e4f4c;
+border-left: 1px solid #4e4f4c;
+border-right: 1px solid #4e4f4c;
+border-bottom: 1px solid #4e4f4c;
+}
+
+QTabWidget::tab-bar {
+    left: 15px; /* move to the right by 5px */
+}
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #bfbfbf, stop: 0.4 #d1cfcf,
+                                stop: 0.5 #d1cfcf, stop: 1.0 #bfbfbf);
+    border: 1px solid #4e4f4c;
+    border-bottom-color: #4e4f4c; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 8ex;
+    padding: 2px;
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 1, x2: 1 y2: -1,
+                                stop: 0 #bff0f2, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #bff0f2);
+}
+
+QTabBar::tab:selected {
+background: qlineargradient(x1: 0, y1: 0.5, x2: 0, y2: -0.5,
+                                stop: 0 #ffffff, stop: 0.4 #c9c9c9,
+                                stop: 0.5 #c9c9c9, stop: 1.0 #ffffff);
+    border-color: #4e4f4c;
+    border-bottom-color: #faa2a2; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="documentMode">
+          <bool>false</bool>
+         </property>
+         <property name="tabsClosable">
+          <bool>false</bool>
+         </property>
+         <property name="tabBarAutoHide">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="controlTab">
+          <attribute name="title">
+           <string>Robot Control</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QTabWidget" name="tabWidget">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="jointControlTab">
+              <attribute name="title">
+               <string>Joint Control</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QComboBox" name="robotSelector">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Choose Robot</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Virtual SCARA Robot (Mirror of Demo Robot)</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetMinimumSize</enum>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <item>
+                    <widget class="QLabel" name="label_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>110</width>
+                       <height>15</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>110</width>
+                       <height>15</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Translation Step (m)</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="translationStepBox">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="buttonSymbols">
+                      <enum>QAbstractSpinBox::NoButtons</enum>
+                     </property>
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="maximum">
+                      <double>100000.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.000001000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QLabel" name="label_5">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>110</width>
+                       <height>15</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>110</width>
+                       <height>15</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Rotation Step (deg)</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="rotationStepBox">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="buttonSymbols">
+                      <enum>QAbstractSpinBox::NoButtons</enum>
+                     </property>
+                     <property name="decimals">
+                      <number>3</number>
+                     </property>
+                     <property name="maximum">
+                      <double>100000.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.000001000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_21">
+                 <item>
+                  <widget class="QPushButton" name="setJointTargetButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>120</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>120</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+color: black;
+border: 1px solid #030303;
+border-radius: 10px;
+border-style: outset;
+background: qradialgradient(cx: 0.3, cy: 0.3, fx: 0.4, fy: -1.2,radius: 0.6, stop: 0 #f2ff00, stop: 1 #f9ff82);
+padding: 5px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.3, fx: -0.4, fy: 0.4,radius: 1.1, stop: 0 #f2ff00, stop: 1 #e6ed5a);
+}
+
+QPushButton:pressed {
+border: 1px solid #fa6666;
+background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, stop: 0 #f2ff00, stop: 1 #fcc603);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Set your joint targets</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="doJointMoveButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+color: black;
+border: 1px solid #030303;
+border-radius: 10px;
+border-style: outset;
+background: qradialgradient(cx: 0.3, cy: 0.3, fx: 0.4, fy: -1.2,radius: 0.6, stop: 0 #03fc07, stop: 1 #94f798);
+padding: 5px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.3, fx: -0.4, fy: 0.4,radius: 1.1, stop: 0 #03fc07, stop: 1 #39fc03);
+}
+
+QPushButton:pressed {
+border: 1px solid #fa6666;
+background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, stop: 0 #03fc07, stop: 1 #edf57f);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Do Move</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="jointControlBox" name="joint1" native="true">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="jointControlBox" name="joint2" native="true">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="jointControlBox" name="joint3" native="true">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="jointControlBox" name="joint4" native="true">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="jointControlBox" name="joint5" native="true">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="jointControlBox" name="joint6" native="true">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="jointControlBox" name="joint7" native="true">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="tabWidget_2">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="cartesianControlTab">
+              <attribute name="title">
+               <string>Cartesian Control</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QFrame" name="frame_3">
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Plain</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_18">
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_12">
+                      <item>
+                       <widget class="QLabel" name="label_2">
+                        <property name="text">
+                         <string>EE - Trans - X (m)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeTransX">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_13">
+                      <item>
+                       <widget class="QLabel" name="label_3">
+                        <property name="text">
+                         <string>EE - Trans - Y (m)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeTransY">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_14">
+                      <item>
+                       <widget class="QLabel" name="label_6">
+                        <property name="text">
+                         <string>EE - Trans - Z (m)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeTransZ">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_16">
+                      <item>
+                       <widget class="QLabel" name="label_8">
+                        <property name="text">
+                         <string>EE - Rot - X (deg)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeRotX">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_17">
+                      <item>
+                       <widget class="QLabel" name="label_9">
+                        <property name="text">
+                         <string>EE - Rot - Y (deg)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeRotY">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_15">
+                      <item>
+                       <widget class="QLabel" name="label_7">
+                        <property name="text">
+                         <string>EE - Rot - Z (deg)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="eeRotZ">
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::NoButtons</enum>
+                        </property>
+                        <property name="decimals">
+                         <number>3</number>
+                        </property>
+                        <property name="minimum">
+                         <double>-100000.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>100000.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.000001000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTabWidget" name="tabWidget_3">
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="tab">
+                  <attribute name="title">
+                   <string>Virtual Joystick</string>
+                  </attribute>
+                  <layout class="QVBoxLayout" name="verticalLayout_6">
+                   <item>
+                    <layout class="QGridLayout" name="gridLayout">
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="vjPlusX">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>64</width>
+                         <height>22</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>60</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: 1px solid #14040b;
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 20px;
+    background: qradialgradient(cx: 0.8, cy: 0.8, fx: 1.2, fy: 0.2,radius: 1.8, stop: 0 #d7d1de stop: 1 #8403fc);
+
+
+}
+
+QPushButton:hover, QPushButton:default {
+    border: 1px solid #0a0a0a;
+    background: qradialgradient(cx: 1.2, cy: 1.2, fx: 1.5, fy: 0.2,radius: 1.6, stop: 0 #d7d1de stop: 1 #8403fc);
+}
+
+QPushButton:pressed {
+    border: 1px solid #f70572;
+    
+background: qradialgradient(cx: 1.6, cy: 1.6, fx: 1.5, fy: 0.5,radius: 1.8, stop: 0 #c2a9d9 stop: 1 #a658d6);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>+</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QPushButton" name="vjPlusY">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>64</width>
+                         <height>22</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>60</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: 1px solid #14040b;
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 20px;
+    background: qradialgradient(cx: 0.8, cy: 0.8, fx: 1.2, fy: 0.2,radius: 1.8, stop: 0 #d7d1de stop: 1 #8403fc);
+
+
+}
+
+QPushButton:hover, QPushButton:default {
+    border: 1px solid #0a0a0a;
+    background: qradialgradient(cx: 1.2, cy: 1.2, fx: 1.5, fy: 0.2,radius: 1.6, stop: 0 #d7d1de stop: 1 #8403fc);
+}
+
+QPushButton:pressed {
+    border: 1px solid #f70572;
+    
+background: qradialgradient(cx: 1.6, cy: 1.6, fx: 1.5, fy: 0.5,radius: 1.8, stop: 0 #c2a9d9 stop: 1 #a658d6);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>+</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QPushButton" name="vjPlusZ">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>64</width>
+                         <height>22</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>60</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: 1px solid #14040b;
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 20px;
+    background: qradialgradient(cx: 0.8, cy: 0.8, fx: 1.2, fy: 0.2,radius: 1.8, stop: 0 #d7d1de stop: 1 #8403fc);
+
+
+}
+
+QPushButton:hover, QPushButton:default {
+    border: 1px solid #0a0a0a;
+    background: qradialgradient(cx: 1.2, cy: 1.2, fx: 1.5, fy: 0.2,radius: 1.6, stop: 0 #d7d1de stop: 1 #8403fc);
+}
+
+QPushButton:pressed {
+    border: 1px solid #f70572;
+    
+background: qradialgradient(cx: 1.6, cy: 1.6, fx: 1.5, fy: 0.5,radius: 1.8, stop: 0 #c2a9d9 stop: 1 #a658d6);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>+</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QComboBox" name="vjMotionSelectX">
+                       <property name="frame">
+                        <bool>true</bool>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>Trans - X</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Rot - X</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QComboBox" name="vjMotionSelectY">
+                       <item>
+                        <property name="text">
+                         <string>Trans - Y</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Rot - Y</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="1" column="2">
+                      <widget class="QComboBox" name="vjMotionSelectZ">
+                       <item>
+                        <property name="text">
+                         <string>Trans - Z</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Rot - Z</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QPushButton" name="vjMinusX">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>64</width>
+                         <height>22</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>60</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: 1px solid #14040b;
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 20px;
+    background: qradialgradient(cx: 0.8, cy: 0.8, fx: 1.2, fy: 0.2,radius: 1.8, stop: 0 #d7d1de stop: 1 #8403fc);
+
+
+}
+
+QPushButton:hover, QPushButton:default {
+    border: 1px solid #0a0a0a;
+    background: qradialgradient(cx: 1.2, cy: 1.2, fx: 1.5, fy: 0.2,radius: 1.6, stop: 0 #d7d1de stop: 1 #8403fc);
+}
+
+QPushButton:pressed {
+    border: 1px solid #f70572;
+    
+background: qradialgradient(cx: 1.6, cy: 1.6, fx: 1.5, fy: 0.5,radius: 1.8, stop: 0 #c2a9d9 stop: 1 #a658d6);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>-</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QPushButton" name="vjMinusY">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>64</width>
+                         <height>22</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>60</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: 1px solid #14040b;
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 20px;
+    background: qradialgradient(cx: 0.8, cy: 0.8, fx: 1.2, fy: 0.2,radius: 1.8, stop: 0 #d7d1de stop: 1 #8403fc);
+
+
+}
+
+QPushButton:hover, QPushButton:default {
+    border: 1px solid #0a0a0a;
+    background: qradialgradient(cx: 1.2, cy: 1.2, fx: 1.5, fy: 0.2,radius: 1.6, stop: 0 #d7d1de stop: 1 #8403fc);
+}
+
+QPushButton:pressed {
+    border: 1px solid #f70572;
+    
+background: qradialgradient(cx: 1.6, cy: 1.6, fx: 1.5, fy: 0.5,radius: 1.8, stop: 0 #c2a9d9 stop: 1 #a658d6);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>-</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="2">
+                      <widget class="QPushButton" name="vjMinusZ">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>64</width>
+                         <height>22</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>60</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: 1px solid #14040b;
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 20px;
+    background: qradialgradient(cx: 0.8, cy: 0.8, fx: 1.2, fy: 0.2,radius: 1.8, stop: 0 #d7d1de stop: 1 #8403fc);
+
+
+}
+
+QPushButton:hover, QPushButton:default {
+    border: 1px solid #0a0a0a;
+    background: qradialgradient(cx: 1.2, cy: 1.2, fx: 1.5, fy: 0.2,radius: 1.6, stop: 0 #d7d1de stop: 1 #8403fc);
+}
+
+QPushButton:pressed {
+    border: 1px solid #f70572;
+    
+background: qradialgradient(cx: 1.6, cy: 1.6, fx: 1.5, fy: 0.5,radius: 1.8, stop: 0 #c2a9d9 stop: 1 #a658d6);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>-</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="tab_2">
+                  <attribute name="title">
+                   <string>Connected Joystick</string>
+                  </attribute>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="operationTab">
+          <attribute name="title">
+           <string>Robot Operations</string>
+          </attribute>
+          <widget class="QFrame" name="frame_5">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>60</y>
+             <width>501</width>
+             <height>341</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>10</y>
+              <width>181</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <bold>true</bold>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Edit Point File</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>110</y>
+              <width>75</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QRadioButton" name="vrsButton">
+               <property name="text">
+                <string>Virtual Robot Simulator</string>
+               </property>
+               <property name="autoExclusive">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="vrsLED">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QRadioButton" name="vr4robotsButton">
+               <property name="text">
+                <string>Connect to VR4Robots</string>
+               </property>
+               <property name="autoExclusive">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="vr4robotsLED">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QFrame" name="frame_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>400</width>
+               <height>400</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>400</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_19">
+              <item>
+               <widget class="QGroupBox" name="groupBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>380</width>
+                  <height>380</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>380</width>
+                  <height>380</height>
+                 </size>
+                </property>
+                <property name="title">
+                 <string>Device States</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QTextBrowser" name="messageBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>350</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>350</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <property name="lineWidth">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1612</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>jointControlBox</class>
+   <extends>QWidget</extends>
+   <header>jointcontrolbox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
