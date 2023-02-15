@@ -132,6 +132,7 @@ public slots:
 
 private:
     Ui::MainHMI *hmi;
+    Logger log;
     DemoRobot demoRobot;
     VirtualSCARA scara;
     

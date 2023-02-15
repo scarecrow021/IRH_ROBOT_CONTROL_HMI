@@ -10,7 +10,7 @@
 
 #include <logger.h>
 
-std::string GetTimeStamp()
+std::string Logger::GetTimeStamp()
 {
 	time_t now = time(0);
 	tm* ltm = localtime(&now);
@@ -26,7 +26,7 @@ std::string GetTimeStamp()
 	return timeStamp;
 }
 
-void CreateLogFileDirectory()
+void Logger::CreateLogFileDirectory()
 {
 	if (!std::filesystem::is_directory(logFolder))
 	{
@@ -34,7 +34,7 @@ void CreateLogFileDirectory()
 	}
 }
 
-void GiveLogFileName()
+void Logger::GiveLogFileName()
 {
 	std::string logTimeStamp = GetTimeStamp();
 	logTimeStamp.erase(remove_if(logTimeStamp.begin(), logTimeStamp.end(), ::isspace), logTimeStamp.end());
@@ -45,15 +45,7 @@ void GiveLogFileName()
 	logFileName = logFolder + "/" + logTimeStamp + logFileExtension;
 }
 
-void MakeLogFile()
-{
-	CreateLogFileDirectory();
-	GiveLogFileName();
-	logFileStream.open(logFileName, std::fstream::in | std::fstream::out | std::fstream::app);
-	WriteLogMessage("Log File Initiated");
-}
-
-std::string WriteLogMessage(std::string s)
+std::string Logger::WriteLogMessage(std::string s)
 {
 	std::string logMessage = GetTimeStamp() + " " + s;
 	logFileStream << logMessage << std::endl;
@@ -61,7 +53,17 @@ std::string WriteLogMessage(std::string s)
 }
 
 
-void CloseLogFile()
+
+Logger::Logger()
+{
+	CreateLogFileDirectory();
+	GiveLogFileName();
+	logFileStream.open(logFileName, std::fstream::in | std::fstream::out | std::fstream::app);
+	WriteLogMessage("Log File Initiated");
+}
+
+
+Logger::~Logger()
 {
 	WriteLogMessage("Application Exit: Log File Closed");
 	logFileStream.close();

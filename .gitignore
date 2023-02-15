@@ -1,3 +1,4 @@
 build_msvc/
 build_support/
 executable_support/
+.vscode/

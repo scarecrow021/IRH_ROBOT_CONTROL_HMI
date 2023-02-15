@@ -17,7 +17,7 @@ MainHMI::~MainHMI()
 
 void MainHMI::CloseEvent(QCloseEvent* event)
 {
-    CloseLogFile();
+	log.~Logger();
     QWidget::closeEvent(event);
 }
 

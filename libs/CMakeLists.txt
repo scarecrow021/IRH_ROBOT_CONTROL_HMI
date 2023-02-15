@@ -12,6 +12,9 @@ message("Successfully added logger")
 add_subdirectory(mymath)
 message("Successfully added mymath")
 
+add_subdirectory(rhsl_cpp)
+message("Successfully added rhsl_cpp")
+
 add_subdirectory(trajectoryGeneration)
 message("Successfully added trajectoryGeneration")
 

@@ -18,32 +18,24 @@
 #include <cppHeaders.h>
 
 
+class Logger
+{
+	std::string logFolder = "LOG_FOLDER";
+	std::string logFileExtension = "_Log_File.log";
+	std::string logFileName;
+	std::fstream logFileStream;
 
-static std::string logFolder = "LOG_FOLDER";
-static std::string logFileExtension = "_Log_File.log";
-inline std::string logFileName;
-static std::fstream logFileStream;
+	// private functions
+	std::string GetTimeStamp();
+	void CreateLogFileDirectory();
+	void GiveLogFileName();
 
+public:
+	Logger();
+	~Logger();
+	std::string WriteLogMessage(std::string s);
 
-
-
-std::string GetTimeStamp();
-
-
-
-void CreateLogFileDirectory();
-
-
-void GiveLogFileName();
-
-
-extern void MakeLogFile();
-
-extern std::string WriteLogMessage(std::string s);
-
-
-extern void CloseLogFile();
-
+};
 
 
 

@@ -3,7 +3,7 @@
 
 void MainHMI::PerformStartup()
 {
-    MakeLogFile();
+    log.WriteLogMessage("Started UI");
     ShowIcon();
     MakeConnections();
     SetConnectionLEDColors();
