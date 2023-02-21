@@ -36,7 +36,7 @@ public:
 	void CalculateIK();
 	void SetDesiredPoint(int axis, int direction, double delta);
 	bool CheckWithinWorkspace();
-	//void SetJointTarget(double j[4]);
+	void SetJointTarget(double j[4]);
 
 };
 

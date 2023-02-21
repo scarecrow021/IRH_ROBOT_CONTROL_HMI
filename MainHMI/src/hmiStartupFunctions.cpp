@@ -9,6 +9,8 @@ void MainHMI::PerformStartup()
     SetConnectionLEDColors();
     JointWidgetsStartup();
     //SetStyleForComboBoxes();
+    hmi->mainTab->setCurrentIndex(CONTROL_TAB);
+    OperationsTabOnStartup();
     showMaximized();
     VIRTUAL_ROBOT = false;
     VR4ROBOT_CONNECT = false;

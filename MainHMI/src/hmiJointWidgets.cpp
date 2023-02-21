@@ -90,6 +90,50 @@ void MainHMI::JointTargetActivation()
 }
 
 
+void MainHMI::DisableAllJointTargets()
+{
+	switch (currentRobotNumberOfJoints)
+	{
+	case FOUR_JOINTS:
+		hmi->joint1->DisableJointTargetInput();
+		hmi->joint2->DisableJointTargetInput();
+		hmi->joint3->DisableJointTargetInput();
+		hmi->joint4->DisableJointTargetInput();
+		break;
+
+	case FIVE_JOINTS:
+		hmi->joint1->DisableJointTargetInput();
+		hmi->joint2->DisableJointTargetInput();
+		hmi->joint3->DisableJointTargetInput();
+		hmi->joint4->DisableJointTargetInput();
+		hmi->joint5->DisableJointTargetInput();
+		break;
+
+	case SIX_JOINTS:
+		hmi->joint1->DisableJointTargetInput();
+		hmi->joint2->DisableJointTargetInput();
+		hmi->joint3->DisableJointTargetInput();
+		hmi->joint4->DisableJointTargetInput();
+		hmi->joint5->DisableJointTargetInput();
+		hmi->joint6->DisableJointTargetInput();
+		break;
+
+	case SEVEN_JOINTS:
+		hmi->joint1->DisableJointTargetInput();
+		hmi->joint2->DisableJointTargetInput();
+		hmi->joint3->DisableJointTargetInput();
+		hmi->joint4->DisableJointTargetInput();
+		hmi->joint5->DisableJointTargetInput();
+		hmi->joint6->DisableJointTargetInput();
+		hmi->joint7->DisableJointTargetInput();
+		break;
+
+	default:
+		break;
+	}
+}
+
+
 void MainHMI::JointOneUpdateAngle(int direction)
 {
 	GenericJointMove(direction, JOINT_1);
@@ -167,7 +211,7 @@ void MainHMI::ShowJointTargetBox()
 }
 
 
-/*
+
 void MainHMI::DoJointMoveButton()
 {
 	switch (hmi->robotSelector->currentIndex())
@@ -188,6 +232,7 @@ void MainHMI::DoJointMoveButton()
 		j[3] = hmi->joint4->GiveJointTargetValue();
 		demoRobot.SetJointTarget(j);
 		UpdateRobotInfo();
+		DisableAllJointTargets();
 		break;
 
 	default:
@@ -195,4 +240,3 @@ void MainHMI::DoJointMoveButton()
 	}
 }
 
-*/

@@ -196,7 +196,7 @@ void Robot::UpdateJoint(int _jointNum, double transStep, double rotStep)
     }
 }
 
-/*
+
 void Robot::SetNewJointTarget(int _jointNum, double newJoint)
 {
     if (joints.at(_jointNum).type == "translational")
@@ -214,7 +214,7 @@ void Robot::SetNewJointTarget(int _jointNum, double newJoint)
         }
     }
 }
-*/
+
 
 
 /**

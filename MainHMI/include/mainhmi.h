@@ -24,6 +24,11 @@ public:
     bool VR4ROBOT_CONNECT;
     enum
     {
+        CONTROL_TAB,
+        OPERATIONS_TAB
+    };
+    enum
+    {
         X_AXIS,
         Y_AXIS,
         Z_AXIS
@@ -89,7 +94,8 @@ public:
     void UpdateRobotInfo();
     void GenericJointMove(int direction, int jointNum);
     void VirtualJointMove(int axis, int direction);
-    
+    void DisableAllJointTargets();
+    void OperationsTabOnStartup();
 
 
     // Demo Robot Functions
@@ -126,7 +132,7 @@ public slots:
     void vjMinusXClicked();
     void vjMinusYClicked();
     void vjMinusZClicked();
-    //void DoJointMoveButton();
+    void DoJointMoveButton();
     
 
 

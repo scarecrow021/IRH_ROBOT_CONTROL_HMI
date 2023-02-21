@@ -36,6 +36,7 @@ public:
     void MakeJointConnections();
     void ActivateJoint(int STATUS);
     void ActivateJointTargetInput();
+    void DisableJointTargetInput();
     double GiveJointTargetValue();
     
 

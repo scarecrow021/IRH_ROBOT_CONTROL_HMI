@@ -146,7 +146,7 @@ bool DemoRobot::CheckWithinWorkspace()
 	}
 }
 
-/*
+
 void DemoRobot::SetJointTarget(double j[4])
 {
 	SetNewJointTarget(JOINT_1, j[JOINT_1]);
@@ -155,4 +155,4 @@ void DemoRobot::SetJointTarget(double j[4])
 	SetNewJointTarget(JOINT_4, j[JOINT_4]);
 	MoveRobot();
 }
-*/
+

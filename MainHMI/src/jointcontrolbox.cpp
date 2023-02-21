@@ -86,3 +86,10 @@ double jointControlBox::GiveJointTargetValue()
 {
     return jointBox->jointTarget->value();
 }
+
+
+
+void jointControlBox::DisableJointTargetInput()
+{
+    jointBox->jointTarget->setDisabled(true);
+}

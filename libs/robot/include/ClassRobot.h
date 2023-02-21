@@ -20,6 +20,13 @@
 class Robot
 {
 public:
+	enum
+	{
+		JOINT_1,
+		JOINT_2,
+		JOINT_3,
+		JOINT_4
+	};
 	std::string robotName;
 	int numberOfJoints;
 	std::vector<Joint> joints;
@@ -42,7 +49,7 @@ public:
 	bool CheckWithinLimits(int jointNum, double value);
 	void UpdateJoint(int _jointNum, double transStep, double rotStep);
 	void Restart();
-	//void SetNewJointTarget(int _jointNum, double newJoint);
+	void SetNewJointTarget(int _jointNum, double newJoint);
 	
 };
 

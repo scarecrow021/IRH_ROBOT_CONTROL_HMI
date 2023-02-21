@@ -298,11 +298,20 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
           <height>20</height>
          </size>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
         <property name="buttonSymbols">
          <enum>QAbstractSpinBox::NoButtons</enum>
         </property>
         <property name="decimals">
          <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-10000.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>10000.000000000000000</double>
         </property>
        </widget>
       </item>
