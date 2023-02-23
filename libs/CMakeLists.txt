@@ -24,6 +24,9 @@ message("Successfully added trajectoryGeneration")
 add_subdirectory(robot)
 message("Successfully added robot")
 
+add_subdirectory(getRobotData)
+message("Successfully added getRobotData")
+
 
 
 

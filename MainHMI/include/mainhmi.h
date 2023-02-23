@@ -8,6 +8,7 @@
 #include <qtHeaders.h>
 #include <ClassVirtualSCARA.h>
 #include <flags.h>
+#include <GetRobotData.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -60,7 +61,6 @@ public:
     void VrStopState(bool state);
     void AddRobotsToHMI();
     void EmergencyButtonColor(QString color);
-    void SetVirtualRobotStateTree();
     void WarningStateDisplay();
 
 
@@ -79,6 +79,10 @@ public:
     void SetVirtualSCARATitleInfo();
     void SetVirtualSCARAEndEffectorPose();
 
+    // Generale Robot Functions
+    void ShowRobotInfo(int ROBOT_NUMBER);
+    void SetRobotTitleInfo(int ROBOT_NUMBER);
+
     
     
 
@@ -93,6 +97,11 @@ public slots:
     void JointTwoUpdateAngle(int direction);
     void JointThreeUpdateAngle(int direction);
     void JointFourUpdateAngle(int direction);
+    void JointFiveUpdateAngle(int direction);
+    void JointSixUpdateAngle(int direction);
+    void JointSevenUpdateAngle(int direction);
+    void JointEightUpdateAngle(int direction);
+    void JointNineUpdateAngle(int direction);
     void vjPlusXClicked();
     void vjPlusYClicked();
     void vjPlusZClicked();
@@ -110,6 +119,7 @@ private:
     Ui::MainHMI *hmi;
     Logger log;
     DemoRobot demoRobot;
+    std::vector<Robot> robotContainer;
     VirtualSCARA scara;
     
 };
