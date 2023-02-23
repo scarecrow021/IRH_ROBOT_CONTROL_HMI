@@ -18,6 +18,8 @@ void MainHMI::MakeConnections()
 	connect(hmi->vjPlusY, SIGNAL(clicked()), this, SLOT(vjPlusYClicked()));
 	connect(hmi->vjPlusZ, SIGNAL(clicked()), this, SLOT(vjPlusZClicked()));
 	connect(hmi->doJointMoveButton, SIGNAL(clicked()), this, SLOT(DoJointMoveButton()));
+	connect(hmi->emergencyStopButton, SIGNAL(clicked()), this, SLOT(EmergencyStopButton()));
+	connect(hmi->debugButton, SIGNAL(triggered()), this, SLOT(DebugFunct()));
 }
 
 

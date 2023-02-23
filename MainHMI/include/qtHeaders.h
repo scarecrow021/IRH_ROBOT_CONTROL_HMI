@@ -22,9 +22,5 @@
 #include <QFileInfo>
 #include <QComboBox>
 #include <QStyleFactory>
-#include <QGraphicsScene>
-#include <QGraphicsItem>
-#include <QGraphicsRectItem>
-#include <QGraphicsView>
 
 #endif // QTHEADERS_H

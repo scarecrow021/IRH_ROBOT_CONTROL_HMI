@@ -29,12 +29,17 @@ void MainHMI::RobotSelector(int index)
 	{
 	case NO_ROBOT:
 		JointWidgetsStartup();
+		ROBOT_SELECTED = false;
+		VirtualRobotReadyState(false);
+		VrReadyState(false);
 		break;
 
 	case ROBOT_ONE:
-		if (VIRTUAL_ROBOT)
+		if (VIRTUAL_ROBOT && !VR4ROBOT_CONNECT)
 		{
-			DebugFunct();
+			DefineVirtualSCARARobot();
+			ROBOT_SELECTED = true;
+			VirtualRobotReadyState(true);
 			break;
 		}
 		else
@@ -44,14 +49,16 @@ void MainHMI::RobotSelector(int index)
 		break;
 
 	case ROBOT_TWO:
-		if (VR4ROBOT_CONNECT)
+		if (VR4ROBOT_CONNECT && !VIRTUAL_ROBOT)
 		{
-			JointActivation(JOINT_STATUS_READY);
+			JointStatusColorDisplay(JOINT_STATUS_READY);
 			hmi->translationStepBox->setValue(0.05);
 			hmi->rotationStepBox->setValue(10);
 			ShowDemoRobotInfo();
 			SetDemoRobotTitleInfo();
 			SetDemoRobotEndEffectorPose();
+			ROBOT_SELECTED = true;
+			VrReadyState(true);
 			break;
 		}
 		else
@@ -66,3 +73,103 @@ void MainHMI::RobotSelector(int index)
 }
 
 
+void MainHMI::AddRobotsToHMI()
+{
+	// Since at this moment, we are only expecting Demo Robot
+	demoRobot.GetRobotData();
+	currentRobotNumberOfJoints = demoRobot.joints.size();
+	hmi->robotSelector->addItem(demoRobot.PrintRobotName().c_str());
+}
+
+
+
+
+void MainHMI::EmergencyStopButton()
+{
+	if (ROBOT_SELECTED)
+	{
+		if (VIRTUAL_ROBOT)
+		{
+			if (!EMERGENCY_STATE)
+			{
+				EMERGENCY_STATE = true;
+				VirtualRobotStopState(true);
+				VirtualRobotReadyState(false);
+				JointStatusColorDisplay(JOINT_STATUS_EMERGENCY);
+				EmergencyButtonColor("green");
+			}
+			else if (EMERGENCY_STATE)
+			{
+				EMERGENCY_STATE = false;
+				JointStatusColorDisplay(JOINT_STATUS_SIMULATOR);
+				EmergencyButtonColor("red");
+				VirtualRobotStopState(false);
+				VirtualRobotReadyState(true);
+			}
+		}
+		else if (VR4ROBOT_CONNECT)
+		{
+			if (!EMERGENCY_STATE)
+			{
+				EMERGENCY_STATE = true;
+				VrStopState(true);
+				VrReadyState(false);
+				JointStatusColorDisplay(JOINT_STATUS_EMERGENCY);
+				EmergencyButtonColor("green");
+			}
+			else if (EMERGENCY_STATE)
+			{
+				EMERGENCY_STATE = false;
+				JointStatusColorDisplay(JOINT_STATUS_SIMULATOR);
+				EmergencyButtonColor("red");
+				VrStopState(false);
+				VrReadyState(true);
+			}
+		}
+	}
+	
+	// else nothing to do, no robot is connected...
+}
+
+
+
+void MainHMI::WarningStateDisplay()
+{
+	
+	if (ROBOT_SELECTED)
+	{
+		// no warning state for virtual robot
+		if (VR4ROBOT_CONNECT)
+		{
+			if (!WARNING_STATE)
+			{
+				WARNING_STATE = true;
+				VrWarningState(true);
+				JointStatusColorDisplay(JOINT_STATUS_WARNING);
+			}
+			else if (WARNING_STATE)
+			{
+				WARNING_STATE = false;
+				JointStatusColorDisplay(JOINT_STATUS_SIMULATOR);
+				VrWarningState(false);
+			}
+		}
+	}
+}
+
+
+void MainHMI::EmergencyButtonColor(QString color)
+{
+	if (color == "red")
+	{
+		const QString redButton = "QPushButton{color: black;border: 2px solid rgb(0, 0, 0);border - radius: 20px;border - style: outset; background: qradialgradient(cx : 0.3, cy : -0.3, fx : -0.4, fy : 0.4, radius : 1.2,stop : 0 rgb(250, 0, 0),stop : 1 rgb(253, 80, 122));padding: 5px;} QPushButton:hover{background: qradialgradient(cx : 0.3, cy : -0.3, fx : -0.4, fy : 0.4,radius : 1.1, stop : 0 rgb(250,0,0), stop : 1 rgb(247,23,83));} QPushButton:pressed{border: 5px solid rgb(20,20,20);background: qradialgradient(cx : -0.3, cy : 0.3, fx : 0.4, fy : -0.4,radius : 1.3, stop : 0 rgb(250,0,0), stop : 1 rgb(250,250,250));}";
+		hmi->emergencyStopButton->setStyleSheet(redButton);
+		hmi->emergencyStopButton->setText("STOP");
+	}
+	else if (color == "green")
+	{
+		const QString greenButton = "QPushButton{color: black;border: 2px solid rgb(0, 0, 0);border - radius: 20px;border - style: outset; background: qradialgradient(cx : 0.3, cy : -0.3, fx : -0.4, fy : 0.4, radius : 1.2,stop : 0 rgb(0, 250, 0),stop : 1 rgb(80, 253, 122));padding: 5px;} QPushButton:hover{background: qradialgradient(cx : 0.3, cy : -0.3, fx : -0.4, fy : 0.4,radius : 1.1, stop : 0 rgb(0,250,0), stop : 1 rgb(23,247,83));} QPushButton:pressed{border: 5px solid rgb(20,20,20);background: qradialgradient(cx : -0.3, cy : 0.3, fx : 0.4, fy : -0.4,radius : 1.3, stop : 0 rgb(0,250,0), stop : 1 rgb(250,250,250));}";
+		hmi->emergencyStopButton->setStyleSheet(greenButton);
+		hmi->emergencyStopButton->setText("START");
+	}
+}

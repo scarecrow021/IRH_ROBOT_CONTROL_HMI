@@ -9,7 +9,7 @@ add_library(robot 	src/ClassDemoRobot.cpp
 					include/ClassVirtualSCARA.h)
 message("Adding robot")
 target_include_directories( robot PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(robot librapi cpp mymath trajectoryGeneration)
+target_link_libraries(robot librapi cpp mymath flags trajectoryGeneration)
 #  
 
 

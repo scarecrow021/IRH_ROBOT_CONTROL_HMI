@@ -88,7 +88,7 @@ Connection::Connection(const std::string& addr, uint16_t port)
 		return;
 	}
 
-    std::cout << "RAPIConnection::RAPIConnection(" << addr << ", " << (int)port << "): connection established." << std::endl;
+    //std::cout << "RAPIConnection::RAPIConnection(" << addr << ", " << (int)port << "): connection established." << std::endl;
 }
 
 Connection::~Connection()

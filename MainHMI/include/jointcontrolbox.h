@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <mymath.h>
+#include <flags.h>
 
 namespace Ui {
 class jointControlBox;
@@ -13,19 +14,6 @@ class jointControlBox : public QWidget
     Q_OBJECT
 
 public:
-    enum
-    {
-        NEGATIVE_DIRECTION = -1,
-        POSITIVE_DIRECTION = 1
-    };
-    enum {
-        JOINT_STATUS_START,
-        JOINT_STATUS_SIMULATOR,
-        JOINT_STATUS_READY,
-        JOINT_STATUS_EMERGENCY,
-        JOINT_STATUS_WARNING,
-        JOINT_STATUS_HALT
-    };
     explicit jointControlBox(QWidget *parent = nullptr);
     ~jointControlBox();
     void SetGroupBoxTitle(QString text);

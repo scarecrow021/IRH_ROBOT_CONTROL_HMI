@@ -16,17 +16,11 @@
 #include <mymath.h>
 #include <rapi.h>
 #include <rapi_utility.h>
+#include <flags.h>
 
 class Robot
 {
 public:
-	enum
-	{
-		JOINT_1,
-		JOINT_2,
-		JOINT_3,
-		JOINT_4
-	};
 	std::string robotName;
 	int numberOfJoints;
 	std::vector<Joint> joints;

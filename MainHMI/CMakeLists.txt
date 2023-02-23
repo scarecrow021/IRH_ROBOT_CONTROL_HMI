@@ -78,7 +78,7 @@ ELSE()
 ENDIF(QT_DEBUG)
 
 
-target_link_libraries(${PROJECT_NAME} cpp robot logger mymath rhsl_cpp)
+target_link_libraries(${PROJECT_NAME} cpp flags robot logger mymath rhsl_cpp)
 #  trajectoryGeneration 
 
 SET_TARGET_PROPERTIES( ${PROJECT_NAME}

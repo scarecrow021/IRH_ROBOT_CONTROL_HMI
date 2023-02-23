@@ -1,7 +1,7 @@
 #include "mainhmi.h"
 #include "./ui_mainhmi.h"
 
-void MainHMI::JointActivation(int STATUS)
+void MainHMI::JointStatusColorDisplay(int STATUS)
 {
 	switch (currentRobotNumberOfJoints)
 	{

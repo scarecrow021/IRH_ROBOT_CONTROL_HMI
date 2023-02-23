@@ -49,6 +49,14 @@ void jointControlBox::SetJointInfoColor(int STATUS)
     {
         jointBox->jointInfoBox->setStyleSheet("background-color: rgba(17, 255, 0, 80)");
     }
+    else if (STATUS == JOINT_STATUS_EMERGENCY)
+    {
+        jointBox->jointInfoBox->setStyleSheet("background-color: rgba(255, 0, 0, 80)");
+    }
+    else if (STATUS == JOINT_STATUS_WARNING)
+    {
+        jointBox->jointInfoBox->setStyleSheet("background-color: rgba(245, 109, 5, 80)");
+    }
 }
 
 void jointControlBox::SetJointInfo(std::string min, std::string max, std::string value)
@@ -93,3 +101,5 @@ void jointControlBox::DisableJointTargetInput()
 {
     jointBox->jointTarget->setDisabled(true);
 }
+
+

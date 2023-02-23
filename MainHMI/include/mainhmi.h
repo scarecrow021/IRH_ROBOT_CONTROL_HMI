@@ -7,6 +7,7 @@
 #include <logger.h>
 #include <qtHeaders.h>
 #include <ClassVirtualSCARA.h>
+#include <flags.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -20,103 +21,69 @@ class MainHMI : public QMainWindow
 public:
     double delta = 0.01; // Fix Cartesian Mode Delta
     double deltaTheta = 0.5; // Fix Theta delta
+    int currentConnection;
+    int currentRobotNumberOfJoints;
+
+    // some internal flags
     bool VIRTUAL_ROBOT;
     bool VR4ROBOT_CONNECT;
-    enum
-    {
-        CONTROL_TAB,
-        OPERATIONS_TAB
-    };
-    enum
-    {
-        X_AXIS,
-        Y_AXIS,
-        Z_AXIS
-    };
-    enum
-    {
-        NO_ROBOT,
-        ROBOT_ONE,
-        ROBOT_TWO,
-        ROBOT_THREE,
-        ROBOT_FOUR
-    };
-    enum
-    {
-        NEGATIVE_DIRECTION = -1,
-        POSITIVE_DIRECTION = 1
-    };
-    enum
-    {
-        JOINT_1,
-        JOINT_2,
-        JOINT_3,
-        JOINT_4,
-        JOINT_5,
-        JOINT_6,
-        JOINT_7
-    };
-    enum
-    {
-        TRANSLATION_REQUEST,
-        ROTATION_REQUEST
-    };
-    enum
-    {
-        FOUR_JOINTS = 4,
-        FIVE_JOINTS,
-        SIX_JOINTS,
-        SEVEN_JOINTS
-    };
-
-    int currentRobotNumberOfJoints;
+    bool EMERGENCY_STATE;
+    bool WARNING_STATE;
+    bool ROBOT_SELECTED;
     
-    enum { 
-        JOINT_STATUS_START,
-        JOINT_STATUS_SIMULATOR,
-        JOINT_STATUS_READY,
-        JOINT_STATUS_EMERGENCY,
-        JOINT_STATUS_WARNING,
-        JOINT_STATUS_HALT
-    };
+    // Functions Below
+
     MainHMI(QWidget *parent = nullptr);
     ~MainHMI();
     void PerformStartup();
-    void AskForRobotData();
     void ShowIcon();
     void CloseEvent(QCloseEvent* event);
     void SetConnectionLEDColors();
     void MakeConnections();
     void JointWidgetsStartup();
-    void JointActivation(int STATUS);
+    void JointStatusColorDisplay(int STATUS);
     void JointTargetActivation();
-    void SetStyleForComboBoxes();
     void UpdateRobotInfo();
     void GenericJointMove(int direction, int jointNum);
     void VirtualJointMove(int axis, int direction);
     void DisableAllJointTargets();
     void OperationsTabOnStartup();
+    void ConnectedDeviceState();
+    void VirtualRobotDefaultState();
+    void VirtualRobotConnectState(bool state);
+    void VirtualRobotReadyState(bool state);
+    void VirtualRobotStopState(bool state);
+    void VrDefaultState();
+    void VrConnectState(bool state);
+    void VrReadyState(bool state);
+    void VrWarningState(bool state);
+    void VrStopState(bool state);
+    void AddRobotsToHMI();
+    void EmergencyButtonColor(QString color);
+    void SetVirtualRobotStateTree();
+    void WarningStateDisplay();
+
 
 
     // Demo Robot Functions
+
     void ShowDemoRobotInfo();
     void SetDemoRobotTitleInfo();
     void SetDemoRobotEndEffectorPose();
 
 
     // Virtual SCARA Trial Functions
+
     void DefineVirtualSCARARobot();
     void ShowVirtualSCARAInfo();
     void SetVirtualSCARATitleInfo();
-    void DebugFunct();
     void SetVirtualSCARAEndEffectorPose();
 
-    enum
-    {
-        TRANSLATION_AXIS,
-        ROTATION_AXIS
-    };
     
+    
+
+    // Slots 
+
 public slots:
     void vrsLED();
     void vr4robotsLED();
@@ -133,6 +100,9 @@ public slots:
     void vjMinusYClicked();
     void vjMinusZClicked();
     void DoJointMoveButton();
+    void EmergencyStopButton();
+    void DebugFunct();
+    
     
 
 

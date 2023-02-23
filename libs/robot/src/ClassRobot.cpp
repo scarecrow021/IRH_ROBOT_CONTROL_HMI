@@ -57,21 +57,33 @@ void Robot::GetRobotData()
 
 void Robot::MoveRobot()
 {
+    // The syntax below is given by Tree-C, taken from one of their examples, but modified and made lean by me to work on my program efficiently.
+    // 
+    // Create a RAPI connection
     rapi::Client client("10.12.16.38", 50002);
+    // Read Object Handle from the RAPI client (Handle = ID of the Body/Bodies Container)
     auto rapiRobot = rapi::utility::execute_function_with_first_reply(client, "vmxGetObjectHandle", rapi::String(robotName));
     if (rapiRobot && !rapiRobot->is_nil())
     {
+        // Need to create a table using RAPI namespace
         auto rapiJointTable = rapi::Table::create();
 
+        // Fill that table with joint values.
         for (int i = 0; i < numberOfJoints; i++)
         {
+            // Here the 'joints' vector is our "q' vector"
             rapiJointTable->insert(rapi::Float::create(joints.at(i).value));
         }
 
+        // RAPI need to make Key-Value pairing. It is a typical method in Computer Science. A bit slow, but it is a safe method.
+        // It then makes a message with this key value pair for robots and joints, i.e., the things we are going to move.
+        // 
         auto rapiRobotKeyValuePair = std::make_pair(rapi::String::create("robot"), std::move(rapiRobot));
         auto rapiJointKeyValuePair = std::make_pair(rapi::String::create("joints"), std::move(rapiJointTable));
 
         auto rapiJointMessage = rapi::Table::create(rapiRobotKeyValuePair, rapiJointKeyValuePair);
+
+        // Now we use the function send_message() which is written in the RAPI Client, which sends the new joint vector to VR4ROBOTS
         auto rapiMoveRobotVar = client.send_message("joints", "vr4robots", "SERVER", rapiJointMessage);
     }
 }

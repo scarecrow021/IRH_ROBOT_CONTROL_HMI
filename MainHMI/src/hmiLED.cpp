@@ -9,10 +9,12 @@ void MainHMI::vrsLED()
 	{
 		hmi->vrsLED->setStyleSheet("background-color:lime");
 		VIRTUAL_ROBOT = true;
-		VR4ROBOT_CONNECT = false;
-
-
-		int controllerId = -1;
+		if (VR4ROBOT_CONNECT)
+		{
+			hmi->vr4robotsButton->click();
+		}
+		VirtualRobotConnectState(true);
+		/*int controllerId = -1;
 		std::cout << "going to read controllers" << std::endl;
 		for (DWORD i = 0; i < XUSER_MAX_COUNT && controllerId == -1; i++)
 		{
@@ -29,16 +31,22 @@ void MainHMI::vrsLED()
 				float leftTrigger = (float)state.Gamepad.bLeftTrigger / 255;
 				std::cout << "left trigger : " << leftTrigger << std::endl;
 			}
-		}
-
-
+		}*/
 	}
 	else
 	{
 		hmi->vrsLED->setStyleSheet("background-color:silver");
 		VIRTUAL_ROBOT = false;
-		VR4ROBOT_CONNECT = false;
+		VirtualRobotConnectState(false);
 	}
+
+	/*
+	std::cout << "VIRTUAL_ROBOT = " << VIRTUAL_ROBOT << std::endl;
+	std::cout << "VR4ROBOT_CONNECT = " << VR4ROBOT_CONNECT << std::endl;
+	std::cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << std::endl;
+	*/
+
+
 }
 
 void MainHMI::vr4robotsLED()
@@ -47,18 +55,26 @@ void MainHMI::vr4robotsLED()
 	{
 		hmi->vr4robotsLED->setStyleSheet("background-color:lime");
 		VR4ROBOT_CONNECT = true;
-		VIRTUAL_ROBOT = false;
-		demoRobot.GetRobotData();
-		currentRobotNumberOfJoints = demoRobot.joints.size();
-		hmi->robotSelector->addItem(demoRobot.PrintRobotName().c_str());
-
+		if (VIRTUAL_ROBOT)
+		{
+			hmi->vrsButton->click();
+		}
+		AddRobotsToHMI();
+		VrConnectState(true);
 	}
 	else
 	{
 		hmi->vr4robotsLED->setStyleSheet("background-color:silver");
 		VR4ROBOT_CONNECT = false;
-		VIRTUAL_ROBOT = false;
+		VrConnectState(false);
 	}
+
+	/*
+	std::cout << "VIRTUAL_ROBOT = " << VIRTUAL_ROBOT << std::endl;
+	std::cout << "VR4ROBOT_CONNECT = " << VR4ROBOT_CONNECT << std::endl;
+	std::cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << std::endl;
+	*/
+
 }
 
 

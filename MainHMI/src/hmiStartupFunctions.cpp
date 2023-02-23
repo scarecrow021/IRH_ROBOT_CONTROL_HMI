@@ -8,29 +8,18 @@ void MainHMI::PerformStartup()
     MakeConnections();
     SetConnectionLEDColors();
     JointWidgetsStartup();
-    //SetStyleForComboBoxes();
     hmi->mainTab->setCurrentIndex(CONTROL_TAB);
     OperationsTabOnStartup();
+    ConnectedDeviceState();
+    EmergencyButtonColor("red");
+    VirtualRobotDefaultState();
+    VrDefaultState();
     showMaximized();
     VIRTUAL_ROBOT = false;
     VR4ROBOT_CONNECT = false;
-}
-
-
-void MainHMI::SetStyleForComboBoxes()
-{
-    const QString style = "Windows";
-    hmi->robotSelector->setStyle(QStyleFactory::create(style));
-    hmi->vjMotionSelectX->setStyle(QStyleFactory::create(style));
-    hmi->vjMotionSelectY->setStyle(QStyleFactory::create(style));
-    hmi->vjMotionSelectZ->setStyle(QStyleFactory::create(style));
-    QStringList a = QStyleFactory::keys();
-}
-
-
-void MainHMI::AskForRobotData()
-{
-	demoRobot.GetRobotData();
+    EMERGENCY_STATE = false;
+    WARNING_STATE = false;
+    ROBOT_SELECTED = false;
 }
 
 void MainHMI::ShowIcon()

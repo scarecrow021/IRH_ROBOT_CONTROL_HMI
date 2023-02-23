@@ -12,6 +12,9 @@ message("Successfully added logger")
 add_subdirectory(mymath)
 message("Successfully added mymath")
 
+add_subdirectory(flags)
+message("Successfully added flags")
+
 add_subdirectory(rhsl_cpp)
 message("Successfully added rhsl_cpp")
 
