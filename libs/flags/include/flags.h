@@ -33,7 +33,8 @@ enum
 };
 enum
 {
-    NO_ROBOT,
+    NO_ROBOT = -2,
+    VIRTUAL_SCARA,
     ROBOT_ONE,
     ROBOT_TWO,
     ROBOT_THREE,
@@ -52,7 +53,9 @@ enum
     JOINT_4,
     JOINT_5,
     JOINT_6,
-    JOINT_7
+    JOINT_7,
+    JOINT_8,
+    JOINT_9
 };
 enum
 {
@@ -64,7 +67,9 @@ enum
     FOUR_JOINTS = 4,
     FIVE_JOINTS,
     SIX_JOINTS,
-    SEVEN_JOINTS
+    SEVEN_JOINTS,
+    EIGHT_JOINTS,
+    NINE_JOINTS
 };
 enum {
     JOINT_STATUS_START,

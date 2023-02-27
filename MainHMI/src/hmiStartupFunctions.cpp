@@ -46,4 +46,6 @@ void MainHMI::JointWidgetsStartup()
     hmi->joint5->PrepareJointControlBoxGraphics();
     hmi->joint6->PrepareJointControlBoxGraphics();
     hmi->joint7->PrepareJointControlBoxGraphics();
+    hmi->joint8->PrepareJointControlBoxGraphics();
+    hmi->joint9->PrepareJointControlBoxGraphics();
 }

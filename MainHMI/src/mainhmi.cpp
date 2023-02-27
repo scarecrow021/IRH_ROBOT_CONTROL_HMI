@@ -27,14 +27,14 @@ void MainHMI::RobotSelector(int index)
 
 	switch (hmi->robotSelector->currentIndex())
 	{
-	case NO_ROBOT:
+	case (NO_ROBOT+2):
 		JointWidgetsStartup();
 		ROBOT_SELECTED = false;
 		VirtualRobotReadyState(false);
 		VrReadyState(false);
 		break;
 
-	case ROBOT_ONE:
+	case (VIRTUAL_SCARA+2):
 		if (VIRTUAL_ROBOT && !VR4ROBOT_CONNECT)
 		{
 			DefineVirtualSCARARobot();
@@ -48,17 +48,38 @@ void MainHMI::RobotSelector(int index)
 		}
 		break;
 
-	case ROBOT_TWO:
+	case (ROBOT_ONE+2):
 		if (VR4ROBOT_CONNECT && !VIRTUAL_ROBOT)
 		{
+			currentRobotNumberOfJoints = robotContainer.at(ROBOT_ONE).numberOfJoints;
 			JointStatusColorDisplay(JOINT_STATUS_READY);
 			hmi->translationStepBox->setValue(0.05);
 			hmi->rotationStepBox->setValue(10);
-			ShowDemoRobotInfo();
-			SetDemoRobotTitleInfo();
-			SetDemoRobotEndEffectorPose();
+			ShowRobotInfo(ROBOT_ONE);
+			SetRobotTitleInfo(ROBOT_ONE);
 			ROBOT_SELECTED = true;
 			VrReadyState(true);
+			
+			break;
+		}
+		else
+		{
+			break;
+		}
+		break;
+
+	case (ROBOT_TWO + 2):
+		if (VR4ROBOT_CONNECT && !VIRTUAL_ROBOT)
+		{
+			currentRobotNumberOfJoints = robotContainer.at(ROBOT_TWO).numberOfJoints;
+			JointStatusColorDisplay(JOINT_STATUS_READY);
+			hmi->translationStepBox->setValue(0.05);
+			hmi->rotationStepBox->setValue(10);
+			ShowRobotInfo(ROBOT_TWO);
+			SetRobotTitleInfo(ROBOT_TWO);
+			ROBOT_SELECTED = true;
+			VrReadyState(true);
+
 			break;
 		}
 		else
@@ -76,9 +97,13 @@ void MainHMI::RobotSelector(int index)
 void MainHMI::AddRobotsToHMI()
 {
 	// Since at this moment, we are only expecting Demo Robot
-	demoRobot.GetRobotData();
-	currentRobotNumberOfJoints = demoRobot.joints.size();
-	hmi->robotSelector->addItem(demoRobot.PrintRobotName().c_str());
+	robotContainer = GetRobotData();
+	//currentRobotNumberOfJoints = demoRobot.joints.size();
+	for (int i = 0; i < robotContainer.size(); i++)
+	{
+		hmi->robotSelector->addItem(robotContainer.at(i).PrintRobotName().c_str());
+	}
+	
 }
 
 

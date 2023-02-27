@@ -29,7 +29,6 @@ public:
 
 	std::string PrintRobotName();
 	void AddToJointVector(Joint j);
-	void GetRobotData();
 	void MoveRobot();
 	std::string PrintJointID(int _jointNum);
 	std::string PrintJointType(int _jointNum);
