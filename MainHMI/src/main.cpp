@@ -4,7 +4,6 @@
 
 #include "mainhmi.h"
 
-#include <QApplication>
 #pragma comment(lib, "Xinput.lib")
 #pragma comment(lib, "Xinput9_1_0.lib")
 

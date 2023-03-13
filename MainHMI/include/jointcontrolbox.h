@@ -1,9 +1,9 @@
 #ifndef JOINTCONTROLBOX_H
 #define JOINTCONTROLBOX_H
 
-#include <QWidget>
-#include <mymath.h>
-#include <flags.h>
+#include <qtHeaders.hpp>
+#include <mymath.hpp>
+#include <flags.hpp>
 
 namespace Ui {
 class jointControlBox;

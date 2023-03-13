@@ -8,7 +8,7 @@
 //
 */
 
-#include <logger.h>
+#include <logger.hpp>
 
 std::string Logger::GetTimeStamp()
 {

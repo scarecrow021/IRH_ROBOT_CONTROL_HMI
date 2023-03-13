@@ -1,44 +1,38 @@
 /**
 *	\file		rhsl
-*	\brief		rhsl parser and related functions
+*	\brief		rhsl database locations
 *	\author		Soumik SARKAR @ ITER Organization
 */
 
 
 #pragma once
-#ifndef RHSL_H
-#define RHSL_H
+#ifndef RHSL_HPP
+#define RHSL_HPP
 
 //----------------
 //	START HERE
 //----------------
 
-#include <cppHeaders.h>
-
-
+#include <cppHeaders.hpp>
 
 // folder names
+
 static std::string databaseFolder = "DATABASES";
 static std::string pointsFolder = "CARTESIAN_POINTS_DATABASE";
 static std::string configurationFolder = "ROBOT_JOINTS_CONFIGURATIONS_DATABASE";
 static std::string operationFolder = "ROBOT_OPERATION_SEQUENCE_DATABASE";
+static std::string animationFolder = "ROBOT_ANIMATION_DATABASE";
 
 // extensions
+
 static std::string configurationFileXtension = ".joints";
 static std::string pointFileXtension = ".point";
 static std::string operationFileXtension = ".sequence";
-
-// parser functions
-
-
-
-
-
-
+static std::string animationFileXtension = ".anim";
 
 
 //----------------
 //	 END HERE
 //----------------
 
-#endif // RHSL_H
+#endif // RHSL_HPP

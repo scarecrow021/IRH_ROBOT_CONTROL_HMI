@@ -8,7 +8,7 @@
 //
 */
 
-#include<mymath.h>
+#include <mymath.hpp>
 
 double ToDegree(double radian)
 {

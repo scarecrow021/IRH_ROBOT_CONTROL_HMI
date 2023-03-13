@@ -28,6 +28,7 @@ void jointControlBox::PrepareJointControlBoxGraphics()
     jointBox->minusButton->setDisabled(true);
     jointBox->plusButton->setDisabled(true);
     SetJointInfoColor(JOINT_STATUS_START);
+    jointBox->jointInfoBox->setTitle("jointID");
     jointBox->jointCurrent->setText("Now");
     jointBox->jointMax->setText("Max");
     jointBox->jointMin->setText("Min");

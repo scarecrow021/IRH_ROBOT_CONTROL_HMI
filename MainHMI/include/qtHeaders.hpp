@@ -9,6 +9,8 @@
 #define QTHEADERS_H
 
 
+#include <QApplication>
+#include <QWidget>
 #include <QDateTime>
 #include <QDebug>
 #include <QTime>

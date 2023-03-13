@@ -6,8 +6,8 @@
 
 
 #pragma once
-#ifndef MYMATH_H
-#define MYMATH_H
+#ifndef MYMATH_HPP
+#define MYMATH_HPP
 
 //----------------
 //	START HERE
@@ -15,7 +15,7 @@
 
 
 
-#include <cppHeaders.h>
+#include <cppHeaders.hpp>
 
 
 /*---*/
@@ -100,5 +100,5 @@ double tr(double q);
 //	 END HERE
 //----------------
 
-#endif // !MYMATH_H
+#endif // MYMATH_HPP
 

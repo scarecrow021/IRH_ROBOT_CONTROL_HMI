@@ -5,11 +5,11 @@
 */
 
 #pragma once
-#ifndef CLASS_DEMO_ROBOT_H
-#define CLASS_DEMO_ROBOT_H
+#ifndef CLASS_DEMO_ROBOT_HPP
+#define CLASS_DEMO_ROBOT_HPP
 
-#include <cppHeaders.h>
-#include <ClassRobot.h>
+#include <cppHeaders.hpp>
+#include <ClassRobot.hpp>
 
 /**
 * DemoRobot has 4 joints [q1, q2, q3, q4] but in vector<Joint>.
@@ -40,4 +40,4 @@ public:
 
 };
 
-#endif // CLASS_DEMO_ROBOT_H
+#endif // CLASS_DEMO_ROBOT_HPP

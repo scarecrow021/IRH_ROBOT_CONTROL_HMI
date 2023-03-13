@@ -336,6 +336,8 @@ void MainHMI::UpdateRobotInfo()
 }
 
 
+
+
 void MainHMI::ShowJointTargetBox()
 {
 	if (hmi->robotSelector->currentIndex() != NO_ROBOT)

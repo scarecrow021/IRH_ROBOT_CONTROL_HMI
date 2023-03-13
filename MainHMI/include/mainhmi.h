@@ -1,14 +1,13 @@
 #ifndef MAINHMI_H
 #define MAINHMI_H
 
-#include <QMainWindow>
-#include <cppHeaders.h>
-#include <ClassDemoRobot.h>
-#include <logger.h>
-#include <qtHeaders.h>
-#include <ClassVirtualSCARA.h>
-#include <flags.h>
-#include <GetRobotData.h>
+#include <qtHeaders.hpp>
+#include <cppHeaders.hpp>
+#include <ClassDemoRobot.hpp>
+#include <logger.hpp>
+#include <ClassVirtualSCARA.hpp>
+#include <flags.hpp>
+#include <GetRobotData.hpp>
 
 
 QT_BEGIN_NAMESPACE
@@ -36,11 +35,14 @@ public:
 
     MainHMI(QWidget *parent = nullptr);
     ~MainHMI();
+
+    // Startup Functions
+
     void PerformStartup();
     void ShowIcon();
-    void CloseEvent(QCloseEvent* event);
     void SetConnectionLEDColors();
     void MakeConnections();
+    void SetInitialRobotList();
     void JointWidgetsStartup();
     void JointStatusColorDisplay(int STATUS);
     void JointTargetActivation();
@@ -49,6 +51,15 @@ public:
     void VirtualJointMove(int axis, int direction);
     void DisableAllJointTargets();
     void OperationsTabOnStartup();
+    
+    
+    void EmergencyButtonColor(QString color);
+    
+    
+    
+
+    // State Functions
+
     void ConnectedDeviceState();
     void VirtualRobotDefaultState();
     void VirtualRobotConnectState(bool state);
@@ -59,10 +70,7 @@ public:
     void VrReadyState(bool state);
     void VrWarningState(bool state);
     void VrStopState(bool state);
-    void AddRobotsToHMI();
-    void EmergencyButtonColor(QString color);
     void WarningStateDisplay();
-
 
 
     // Demo Robot Functions
@@ -79,9 +87,15 @@ public:
     void SetVirtualSCARATitleInfo();
     void SetVirtualSCARAEndEffectorPose();
 
-    // Generale Robot Functions
+    // General Robot Functions
+    void AddRobotsToHMI();
     void ShowRobotInfo(int ROBOT_NUMBER);
     void SetRobotTitleInfo(int ROBOT_NUMBER);
+    void EmptyRobotContainer();
+
+    // Closing Function
+
+    void CloseEvent(QCloseEvent* event);
 
     
     

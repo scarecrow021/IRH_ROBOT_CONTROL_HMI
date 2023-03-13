@@ -7,16 +7,16 @@
 #pragma once
 
 
-#ifndef CLASS_ROBOT_H
-#define CLASS_ROBOT_H
+#ifndef CLASS_ROBOT_HPP
+#define CLASS_ROBOT_HPP
 
-#include <cppHeaders.h>
-#include <ClassJoint.h>
-#include <ClassPoint.h>
-#include <mymath.h>
+#include <cppHeaders.hpp>
+#include <ClassJoint.hpp>
+#include <ClassPoint.hpp>
+#include <mymath.hpp>
 #include <rapi.h>
 #include <rapi_utility.h>
-#include <flags.h>
+#include <flags.hpp>
 
 class Robot
 {
@@ -46,4 +46,4 @@ public:
 	
 };
 
-#endif // CLASS_ROBOT_H
+#endif // CLASS_ROBOT_HPP

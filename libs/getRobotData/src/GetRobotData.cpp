@@ -1,4 +1,4 @@
-#include <GetRobotData.h>
+#include <GetRobotData.hpp>
 
 std::vector<Robot> GetRobotData()
 {
@@ -12,28 +12,37 @@ std::vector<Robot> GetRobotData()
         {
             for (const auto& robot : robots->keyed_values())
             {
-                Robot tempRobot;
                 auto detail = robot.second->find_value("details");
-                if (detail && detail->is_list())
+                if (detail->is_list()) //detail && 
                 {
-                    int i = 0;
-                    tempRobot.robotName = robot.second->find_value("name")->as_string();
-                    tempRobot.joints.clear();
+                    int checkRobot = 0;
                     for (const auto& jointi : detail->indexed_values())
                     {
-                        Joint tempJoint;
-                        tempJoint.id = jointi->find_value("id")->as_string();
-                        tempJoint.type = jointi->find_value("type")->as_string();
-                        tempJoint.SetUnitForJoint();
-                        tempJoint.min = jointi->find_value("min")->as_double();
-                        tempJoint.value = jointi->find_value("current")->as_double();
-                        tempJoint.max = jointi->find_value("max")->as_double();
-                        tempRobot.AddToJointVector(tempJoint);
-                        i++;
+                        checkRobot++;
                     }
-                    tempRobot.numberOfJoints = i;
+
+                    if (checkRobot > 0)
+                    {
+                        Robot tempRobot;
+                        int i = 0;
+                        tempRobot.robotName = robot.second->find_value("name")->as_string();
+                        tempRobot.joints.clear();
+                        for (const auto& jointi : detail->indexed_values())
+                        {
+                            Joint tempJoint;
+                            tempJoint.id = jointi->find_value("id")->as_string();
+                            tempJoint.type = jointi->find_value("type")->as_string();
+                            tempJoint.SetUnitForJoint();
+                            tempJoint.min = jointi->find_value("min")->as_double();
+                            tempJoint.value = jointi->find_value("current")->as_double();
+                            tempJoint.max = jointi->find_value("max")->as_double();
+                            tempRobot.AddToJointVector(tempJoint);
+                            i++;
+                        }
+                        tempRobot.numberOfJoints = i;
+                        robotContainerToBeFilled.push_back(tempRobot);
+                    }
                 }
-                robotContainerToBeFilled.push_back(tempRobot);
             }
         }
     }

@@ -109,6 +109,23 @@ void MainHMI::AddRobotsToHMI()
 
 
 
+
+void MainHMI::EmptyRobotContainer()
+{
+	if (robotContainer.size() > 0)
+	{
+		robotContainer.clear();
+		SetInitialRobotList();
+	}
+	else
+	{
+		std::cout << "nothing to clear";
+	}
+}
+
+
+
+
 void MainHMI::EmergencyStopButton()
 {
 	if (ROBOT_SELECTED)

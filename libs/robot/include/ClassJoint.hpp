@@ -5,14 +5,14 @@
 */
 
 #pragma once
-#ifndef CLASS_JOINT_H
-#define CLASS_JOINT_H
+#ifndef CLASS_JOINT_HPP
+#define CLASS_JOINT_HPP
 
 //----------------
 //	START HERE
 //----------------
 
-#include <cppHeaders.h>
+#include <cppHeaders.hpp>
 
 /**
 * \class	Joint
@@ -39,4 +39,4 @@ public:
 //	 END HERE
 //----------------
 
-#endif // CLASS_JOINT_H
+#endif // CLASS_JOINT_HPP

@@ -14,6 +14,8 @@ void MainHMI::PerformStartup()
     EmergencyButtonColor("red");
     VirtualRobotDefaultState();
     VrDefaultState();
+    hmi->cartesianControlTab->setDisabled(true);
+    SetInitialRobotList();
     showMaximized();
     VIRTUAL_ROBOT = false;
     VR4ROBOT_CONNECT = false;
@@ -49,3 +51,13 @@ void MainHMI::JointWidgetsStartup()
     hmi->joint8->PrepareJointControlBoxGraphics();
     hmi->joint9->PrepareJointControlBoxGraphics();
 }
+
+
+
+void MainHMI::SetInitialRobotList()
+{
+    hmi->robotSelector->clear();
+    hmi->robotSelector->addItem("Choose Robot");
+    hmi->robotSelector->addItem("Virtual SCARA Robot (Mirror of Demo Robot)");
+}
+

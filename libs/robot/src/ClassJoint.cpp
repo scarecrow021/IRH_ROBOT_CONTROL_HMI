@@ -8,7 +8,7 @@
 //
 */
 
-#include <ClassJoint.h>
+#include <ClassJoint.hpp>
 
 Joint::Joint()
 {

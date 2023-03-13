@@ -5,13 +5,13 @@
 */
 
 #pragma once
-#ifndef CLASS_VIRTUAL_SCARA_H
-#define CLASS_VIRTUAL_SCARA_H
+#ifndef CLASS_VIRTUAL_SCARA_HPP
+#define CLASS_VIRTUAL_SCARA_HPP
 
-#include <cppHeaders.h>
-#include <ClassJoint.h>
-#include <ClassPoint.h>
-#include <mymath.h>
+#include <cppHeaders.hpp>
+#include <ClassJoint.hpp>
+#include <ClassPoint.hpp>
+#include <mymath.hpp>
 
 class VirtualSCARA
 {
@@ -51,4 +51,4 @@ public:
 
 
 
-#endif // CLASS_VIRTUAL_SCARA_H
+#endif // CLASS_VIRTUAL_SCARA_HPP

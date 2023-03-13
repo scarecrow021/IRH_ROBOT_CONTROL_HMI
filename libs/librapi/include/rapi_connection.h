@@ -4,7 +4,7 @@
 #include "rapi_stream.h"
 
 #ifdef _WIN32
-	#include <cppHeaders.h>
+	#include <cppHeaders.hpp>
 	
 	#define RAPI_SOCKET SOCKET
 #else

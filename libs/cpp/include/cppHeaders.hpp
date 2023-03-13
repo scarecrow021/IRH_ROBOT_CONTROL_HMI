@@ -5,8 +5,8 @@
 */
 
 #pragma once
-#ifndef CPPHEADERS_H
-#define CPPHEADERS_H
+#ifndef CPPHEADERS_HPP
+#define CPPHEADERS_HPP
 
 //----------------
 //	START HERE
@@ -35,5 +35,5 @@
 //	 END HERE
 //----------------
 
-#endif // CPPHEADERS_H
+#endif // CPPHEADERS_HPP
 

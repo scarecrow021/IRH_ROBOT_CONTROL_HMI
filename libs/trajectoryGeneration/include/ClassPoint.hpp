@@ -6,15 +6,15 @@
 
 
 #pragma once
-#ifndef CLASSPOINT_H
-#define CLASSPOINT_H
+#ifndef CLASSPOINT_HPP
+#define CLASSPOINT_HPP
 
 //----------------
 //	START HERE
 //----------------
 
 
-#include <cppHeaders.h>
+#include <cppHeaders.hpp>
 
 // public class
 // (x,y,z)
@@ -140,5 +140,5 @@ public:
 //	 END HERE
 //----------------
 
-#endif // !CLASSPOINT_H
+#endif // CLASSPOINT_HPP
 

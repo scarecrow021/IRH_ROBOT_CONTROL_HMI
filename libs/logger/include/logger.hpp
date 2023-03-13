@@ -6,8 +6,8 @@
 
 
 #pragma once
-#ifndef LOGGER_H
-#define LOGGER_H
+#ifndef LOGGER_HPP
+#define LOGGER_HPP
 
 //----------------
 //	START HERE
@@ -15,7 +15,7 @@
 
 
 
-#include <cppHeaders.h>
+#include <cppHeaders.hpp>
 
 
 class Logger
@@ -43,4 +43,4 @@ public:
 //	 END HERE
 //----------------
 
-#endif // LOGGER_H
+#endif // LOGGER_HPP

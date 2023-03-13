@@ -229,7 +229,7 @@ QTabBar::tab:!selected {
 }</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <property name="documentMode">
           <bool>false</bool>
@@ -1356,6 +1356,40 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
+                   <widget class="QPushButton" name="getCurrentPointButton">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+color: black;
+border: 1px solid #030303;
+border-style: outset;
+background: qradialgradient(cx: 0.3, cy: 0.3, fx: 0.4, fy: -1.2,radius: 0.6, stop: 0 #c9c9c9, stop: 1 #adadad);
+padding: 5px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.3, fx: -0.4, fy: 0.4,radius: 1.1, stop: 0 #c9c9c9, stop: 1 #adbdf7);
+}
+
+QPushButton:pressed {
+border: 1px solid #a4b1fc;
+background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, stop: 0 #c9c9c9, stop: 1 #f2f0f0);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Get Current Point</string>
+                    </property>
+                    <property name="autoDefault">
+                     <bool>false</bool>
+                    </property>
+                    <property name="default">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
                    <widget class="QPushButton" name="savePointFileButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
@@ -1416,7 +1450,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit">
+                   <widget class="QLineEdit" name="translationPointFile">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                       <horstretch>0</horstretch>
@@ -1467,7 +1501,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit_2">
+                   <widget class="QLineEdit" name="rotationPointFile">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                       <horstretch>0</horstretch>
@@ -1595,6 +1629,40 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                     </property>
                     <property name="text">
                      <string>Edit</string>
+                    </property>
+                    <property name="autoDefault">
+                     <bool>false</bool>
+                    </property>
+                    <property name="default">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="GetCurrentJointConfigurationButton">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+color: black;
+border: 1px solid #030303;
+border-style: outset;
+background: qradialgradient(cx: 0.3, cy: 0.3, fx: 0.4, fy: -1.2,radius: 0.6, stop: 0 #c9c9c9, stop: 1 #adadad);
+padding: 5px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.3, fx: -0.4, fy: 0.4,radius: 1.1, stop: 0 #c9c9c9, stop: 1 #adbdf7);
+}
+
+QPushButton:pressed {
+border: 1px solid #a4b1fc;
+background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, stop: 0 #c9c9c9, stop: 1 #f2f0f0);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Get Current Joint Configuration</string>
                     </property>
                     <property name="autoDefault">
                      <bool>false</bool>
@@ -2031,7 +2099,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_3"/>
+                     <widget class="QLineEdit" name="operationStepComment"/>
                     </item>
                    </layout>
                   </item>
@@ -2119,7 +2187,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                  </layout>
                 </item>
                 <item>
-                 <widget class="QTableWidget" name="tableWidget"/>
+                 <widget class="QTableWidget" name="operationTable"/>
                 </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_27">
@@ -2238,7 +2306,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_32">
                   <item>
-                   <widget class="QPushButton" name="newOperationFileButton_2">
+                   <widget class="QPushButton" name="newAnimationFileButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -2272,7 +2340,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="loadOperationFileButton_2">
+                   <widget class="QPushButton" name="loadAnimationFileButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -2306,7 +2374,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="editOperationFileButton_2">
+                   <widget class="QPushButton" name="editAnimationFileButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -2340,7 +2408,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="saveOperationFileButton_2">
+                   <widget class="QPushButton" name="saveAnimationFileButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -2382,7 +2450,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_34">
                     <item>
-                     <widget class="QPushButton" name="addCurrentOperationButton_2">
+                     <widget class="QPushButton" name="addKeyFrameButton">
                       <property name="styleSheet">
                        <string notr="true">QPushButton {
 color: black;
@@ -2421,7 +2489,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_4"/>
+                     <widget class="QLineEdit" name="keyFrameTime"/>
                     </item>
                     <item>
                      <widget class="QLabel" name="label_34">
@@ -2444,7 +2512,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="eraseCurrentOperationButton_2">
+                     <widget class="QPushButton" name="eraseKeyFrameButton">
                       <property name="styleSheet">
                        <string notr="true">QPushButton {
 color: black;
@@ -2473,12 +2541,12 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                  </layout>
                 </item>
                 <item>
-                 <widget class="QTableWidget" name="tableWidget_2"/>
+                 <widget class="QTableWidget" name="animationTable"/>
                 </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_33">
                   <item>
-                   <widget class="QPushButton" name="forgetOperationFileButton_3">
+                   <widget class="QPushButton" name="previousKeyFrameButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -2512,7 +2580,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="forgetOperationFileButton_4">
+                   <widget class="QPushButton" name="nextKeyFrameButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -2563,7 +2631,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="forgetOperationFileButton_2">
+                   <widget class="QPushButton" name="forgetAnimationButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -2597,7 +2665,7 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="doOperationButton_2">
+                   <widget class="QPushButton" name="doAnimationButton">
                     <property name="styleSheet">
                      <string notr="true">QPushButton {
 color: black;
@@ -3233,18 +3301,24 @@ background: qradialgradient(cx: -0.3, cy: 0.3, fx: 0.4, fy: -0.4,radius: 1.3, st
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuMenu">
+   <widget class="QMenu" name="devMenu">
     <property name="title">
-     <string>Menu</string>
+     <string>Developer</string>
     </property>
     <addaction name="debugButton"/>
+    <addaction name="virtualVRButton"/>
    </widget>
-   <addaction name="menuMenu"/>
+   <addaction name="devMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="debugButton">
    <property name="text">
     <string>DebugButton</string>
+   </property>
+  </action>
+  <action name="virtualVRButton">
+   <property name="text">
+    <string>Virtual vr4robot Data</string>
    </property>
   </action>
  </widget>

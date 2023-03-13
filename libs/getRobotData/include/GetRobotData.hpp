@@ -7,13 +7,13 @@
 #pragma once
 
 
-#ifndef GET_ROBOT_DATA_H
-#define GET_ROBOT_DATA_H
+#ifndef GET_ROBOT_DATA_HPP
+#define GET_ROBOT_DATA_HPP
 
-#include <ClassRobot.h>
-#include <ClassJoint.h>
+#include <ClassRobot.hpp>
+#include <ClassJoint.hpp>
 
 
 std::vector<Robot> GetRobotData();
 
-#endif // GET_ROBOT_DATA_H
+#endif // GET_ROBOT_DATA_HPP

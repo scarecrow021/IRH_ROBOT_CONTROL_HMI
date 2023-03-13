@@ -5,12 +5,10 @@
 */
 
 #pragma once
+#ifndef FLAGS_HPP
+#define FLAGS_HPP
 
-
-#ifndef FLAGS_H
-#define FLAGS_H
-
-#include <cppHeaders.h>
+#include <cppHeaders.hpp>
 
 
 
@@ -124,4 +122,4 @@ enum
 
 
 
-#endif // FLAGS_H
+#endif // FLAGS_HPP

@@ -37,6 +37,7 @@ void MainHMI::vrsLED()
 	{
 		hmi->vrsLED->setStyleSheet("background-color:silver");
 		VIRTUAL_ROBOT = false;
+		SetInitialRobotList();
 		VirtualRobotConnectState(false);
 	}
 
@@ -67,6 +68,9 @@ void MainHMI::vr4robotsLED()
 		hmi->vr4robotsLED->setStyleSheet("background-color:silver");
 		VR4ROBOT_CONNECT = false;
 		VrConnectState(false);
+		EmptyRobotContainer();
+		
+		
 	}
 
 	/*
@@ -76,6 +80,8 @@ void MainHMI::vr4robotsLED()
 	*/
 
 }
+
+
 
 
 
